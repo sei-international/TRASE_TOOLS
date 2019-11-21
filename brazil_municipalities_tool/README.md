@@ -43,3 +43,13 @@ Brazilian 2-letter state codes:
 |SAO PAULO|SP|
 |SERGIPE|SE|
 |TOCANTINS|TO|
+
+To load the file from github, directly into R, run:
+
+`library(jsonlite)`
+
+`location <- "https://raw.github.com/sei-international/TRASE_TOOLS/master/brazil_municipalities_tool/data.json"`
+
+`geocode_dic <- fromJSON(location)`
+
+`geocode_dic <- geocode_dic[[1]] %>% unnest()`
